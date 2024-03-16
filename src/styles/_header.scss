@@ -1,0 +1,82 @@
+.header {
+  padding: 58px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+
+  @include for-tablet {
+    padding: 10px 0;
+  }
+
+  &_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-tablet {
+      display: none;
+    }
+  }
+
+  &_btns-row {
+    display: flex;
+    gap: 10px
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--defBtnColor);
+  border-radius: 20px;
+  height: 78px;
+  padding: 0 30px;
+  position: relative;
+
+  h2 {
+    font-weight: 900;
+    font-size: 32px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+
+  .btn-menu {
+    background: rgba(253, 253, 253, 0.35);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+
+    svg {
+      width: 17px;
+      height: auto;
+    }
+  }
+
+  &_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background: rgba(255, 176, 224, 1);
+    width: 100%;
+    max-width: 290px;
+    right: 0;
+    padding:5px 0 0;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    .btn {
+      border-radius: 0;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+}

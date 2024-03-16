@@ -1,0 +1,35 @@
+.footer{
+  &_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: start;
+      gap: 14px;
+    }
+    a {
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+
+      &:hover {
+        color: var(--linkHover);
+      }
+    }
+  }
+
+  &_copyright {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include for-phone-only {
+      text-align: left;
+      margin-top: 100px;
+    }
+  }
+
+
+}

@@ -1,0 +1,120 @@
+body {
+  --defColor: rgba(245, 94, 186, 1);
+  --defBtnColor: var(--defColor);
+  --linkHover: rgb(248, 225, 239);
+  --defBtnHoverColor: rgb(197, 57, 143);
+  margin: 0;
+  min-height: 100vh;
+  padding: 164px 0 0;
+  color: white;
+  background: linear-gradient(
+                  rgba(255, 176, 224, 1),
+                  rgb(245, 162, 212)
+  );
+  @include for-phone-only {
+    background: linear-gradient(
+                    rgba(255, 176, 224, 1),
+                    rgba(245, 94, 186, 1)
+    );
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1860px;
+  padding: 0 20px;
+  display: block;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  background: var(--defBtnColor);
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  padding: 9px 23px;
+  border-radius: 7px;
+  transition: 0.7s;
+
+  &:hover {
+    box-shadow: inset 0 -5em 0 0 var(--defBtnHoverColor)
+  }
+}
+
+.code-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 29px;
+  @include for-phone-only {
+    font-size: 12px;
+    gap: 10px;
+
+    svg {
+      width: 14px;
+      height: auto;
+    }
+  }
+}
+
+.block-bg {
+  background: var(--defColor);
+  padding: 40px;
+  font-family: "Inter Tight", sans-serif;
+  border-radius: 20px;
+  h2 {
+    font-size: 44.25px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 200;
+    font-size: 32px;
+    margin: 0;
+  }
+}
+
+
+.border_e {
+  border-bottom: 1px solid white;
+}
+
+
+.tablet {
+  @include for-phone-only {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @include for-tablet-portrait-up {
+    display: none !important;
+  }
+}

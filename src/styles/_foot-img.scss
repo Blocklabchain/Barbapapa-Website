@@ -1,0 +1,12 @@
+.foot-img{
+  img {
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  @include for-phone-only {
+    margin-bottom: 100px;
+  }
+}
