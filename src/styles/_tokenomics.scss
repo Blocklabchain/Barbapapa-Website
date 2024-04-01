@@ -37,6 +37,10 @@
       flex-direction: column;
       gap: 0;
     }
+    svg {
+      max-width: 90%;
+      height: auto;
+    }
   }
   h4 {
     font-family: "Inter Tight", sans-serif;
