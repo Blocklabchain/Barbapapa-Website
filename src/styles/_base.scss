@@ -12,10 +12,11 @@ body {
                   rgb(245, 162, 212)
   );
   @include for-phone-only {
-    background: linear-gradient(
-                    rgba(255, 176, 224, 1),
-                    rgba(245, 94, 186, 1)
-    );
+    background: #FFB0E0;
+    //background: linear-gradient(
+    //                rgba(255, 176, 224, 1),
+    //                rgba(245, 94, 186, 1)
+    //);
   }
 }
 

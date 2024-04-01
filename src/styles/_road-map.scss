@@ -1,0 +1,243 @@
+.road-map {
+  padding: 90px 0;
+  @include for-tablet-landscape {
+    padding: 50px 0;
+  }
+  h2 {
+    text-align: center;
+    font-size: 44.25px;
+    font-family: "Inter Tight", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include for-tablet-landscape {
+      font-size: 32px;
+    }
+    &:after {
+      display: block;
+      content: '';
+      height: 5px;
+      width: 56px;
+      background: white;
+      margin: 20px auto 0;
+    }
+  }
+
+  &_row {
+    display: flex;
+    justify-content: center;
+
+    @include for-tablet-landscape {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &_item-circe {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: var(--def-color);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include maxLg() {
+      width: 197px;
+      height: 197px;
+    }
+    @include for-tablet-landscape {
+      width: 182px;
+      height: 182px;
+    }
+  }
+  &_item-circe-inner {
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 67%;
+    height: 67%;
+
+
+  }
+
+  h4 {
+    color: var(--def-color);;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    @include maxLg() {
+      font-size: 37px;
+    }
+    @include for-tablet-landscape {
+      font-size: 33px;
+    }
+  }
+  &_item-circe-outer {
+    width: 410px;
+    height: 389px;
+    background: url("/src/images/e-red.svg") no-repeat center / contain;
+    display: flex;
+    padding: 25px;
+    position: relative;
+
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      border-radius: 50%;
+      background: var(--def-color);
+      transform: translateY(-40px) translateX(-12px);
+      display: none;
+      @include for-tablet-landscape {
+        display: block;
+        width: 14px;
+        height: 14px;
+        top: 30%;
+        transform: translateY(-40px) translateX(-15px);
+      }
+    }
+
+
+    @include maxLg() {
+      width: 297px;
+      height: 282px;
+      padding: 15px;
+    }
+
+    @include for-tablet-landscape {
+      background: url("/src/images/m-r.svg") no-repeat center / contain;
+      width: 223px;
+      height: 463px;
+      padding: 15px 20px;
+    }
+  }
+
+
+  &_item-block {
+    padding: 20px;
+    background: var(--def-color);
+    width: 311px;
+    border-radius: 11px;
+    margin-top: 11px;
+    position: relative;
+    @include maxLg() {
+      width: 225px;
+
+    }
+    @include for-tablet-landscape {
+      width: 208px;
+      margin-top: -200px;
+      margin-bottom: 50px;
+      height: 147px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    &:before {
+      content: '';
+      display: block;
+      width: 110%;
+      height: 110%;
+      border-radius: 11px;
+      border: 5px solid var(--def-color);;
+      position: absolute;
+      top: -7%;
+      left: -6.6%;
+    }
+
+    ul {
+      padding: 0 0 0 20px;
+      @include for-tablet-landscape {
+        margin: 0;
+      }
+      li {
+        color: white;
+        font-size: 16px;
+        line-height: 24px;
+        @include maxLg() {
+          font-size: 13px;
+        }
+        @include for-tablet-landscape {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  &_item {
+    --def-color: grey;
+
+    &--red {
+      --def-color: #E5442E;
+      .road-map_item-circe-outer {
+        background: url("/src/images/e-red.svg") no-repeat center / contain;
+        @include for-tablet-landscape {
+          background: url("/src/images/m-r.svg") no-repeat center / contain;
+        }
+      }
+    }
+
+    &--orange {
+      --def-color: #F07A0C;
+      .road-map_item-circe-outer {
+        background: url("/src/images/e-ornage.svg") no-repeat center / contain;
+        @include for-tablet-landscape {
+          background: url("/src/images/m-o.svg") no-repeat center / contain;
+        }
+      }
+    }
+
+    &--blue {
+      --def-color: #1E9CD6;
+      .road-map_item-circe-outer {
+        background: url("/src/images/e-blue.svg") no-repeat center / contain;
+        @include for-tablet-landscape {
+          background: url("/src/images/m-b.svg") no-repeat center / contain;
+        }
+      }
+    }
+
+    &--green {
+      --def-color: #1EA12D;
+      .road-map_item-circe-outer {
+        width: 311px;
+        background: url("/src/images/e-green.svg") no-repeat center / contain;
+        position: relative;
+        &:before {
+          display: block;
+          @include for-tablet-landscape {
+            top: 50%;
+            transform: translateY(-40px) translateX(-10px);
+          }
+        }
+
+        @include maxLg() {
+          width: 226px;
+        }
+
+        @include for-tablet-landscape {
+          width: 209px;
+          height: 261px;
+          background: url("/src/images/m-g.svg") no-repeat center / contain;
+        }
+      }
+
+
+      .road-map_item-block {
+        @include for-tablet-landscape {
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}

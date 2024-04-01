@@ -28,9 +28,12 @@ function navigationHandler() {
   const btnsHome = document.querySelectorAll('.btn--home');
   const btnsAbout = document.querySelectorAll('.btn--about');
   const btnsIntegration = document.querySelectorAll('.btn--integration');
+  const btnsTokenomics = document.querySelectorAll('.btn--tokenomics');
+  const btnsRoadMap = document.querySelectorAll('.btn--road-map');
+  const btnsPartners = document.querySelectorAll('.btn--partners');
+
   for(let btn of btnsHome) {
     btn.addEventListener('click', () => {
-      console.log("=>(main.ts:31) 111", 111);
       smoothScroll('header')
     })
   }
@@ -42,6 +45,21 @@ function navigationHandler() {
   for(let btn of btnsIntegration) {
     btn.addEventListener('click', () => {
       smoothScroll('#integration')
+    })
+  }
+  for(let btn of btnsTokenomics) {
+    btn.addEventListener('click', () => {
+      smoothScroll('#tokenomics')
+    })
+  }
+  for(let btn of btnsRoadMap) {
+    btn.addEventListener('click', () => {
+      smoothScroll('#road-map')
+    })
+  }
+  for(let btn of btnsPartners) {
+    btn.addEventListener('click', () => {
+      smoothScroll('#partners')
     })
   }
 }
